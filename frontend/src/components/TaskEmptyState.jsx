@@ -3,6 +3,7 @@ import { Card } from "./ui/card";
 import { Circle } from "lucide-react";
 
 const TaskEmptyState = ({ filter }) => {
+  console.log(filter);
   return (
     <Card className="p-8 text-center border-0 bg-gradient-card shadow-custom-md">
       <div className="space-y-3">
@@ -11,9 +12,9 @@ const TaskEmptyState = ({ filter }) => {
           <h3 className="font-medium text-foreground">
             {filter === "active"
               ? "Khong co nhiem vu nao dang lam."
-              : filter === "completed"
-              ? "Chua co nhiem vu Hoan thanh."
-              : "Chua co Nhiem vu =((."}
+              : filter === "complete"
+                ? "Chua co nhiem vu Hoan thanh."
+                : "Chua co Nhiem vu =((."}
           </h3>
           <p className="text-sm text-muted-foreground">
             {filter === "all"
